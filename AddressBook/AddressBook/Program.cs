@@ -11,9 +11,13 @@ namespace AddressBook
     {
         static void Main(string[] args)
         {
-            UI ui = new UI();
-            ui.UserInput();
-            
+            AdressBookInfo abi = new AdressBookInfo();
+            abi.UserInput();
+            abi.WriteTo();
+            abi.WriteToFavorites();
+            Console.ReadLine();
+            abi.ReadTo();
+            abi.readFavorites();
 
             Console.ReadLine();
         }
